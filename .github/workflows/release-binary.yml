@@ -21,7 +21,7 @@ jobs:
         uses: goreleaser/goreleaser-action@v4
         with:
           version: latest
-          args: release -f .goreleaser/mac.yml --clean
+          args: release -f .goreleaser/mac.yml --clean --snapshot
           workdir: v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -44,7 +44,7 @@ jobs:
         uses: goreleaser/goreleaser-action@v4
         with:
           version: latest
-          args: release -f .goreleaser/linux.yml --clean
+          args: release -f .goreleaser/linux.yml --clean --snapshot
           workdir: v2
         env: 
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
@@ -67,7 +67,7 @@ jobs:
         uses: goreleaser/goreleaser-action@v4
         with:
           version: latest
-          args: release -f .goreleaser/windows.yml --clean
+          args: release -f .goreleaser/windows.yml --clean --snapshot
           workdir: v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
